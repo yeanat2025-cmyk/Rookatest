@@ -1,15 +1,21 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/rookatest/browser"
-      }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "name": "rooka-live-admin",
+  "version": "1.0.0",
+  "description": "Admin panel for Rooka Live — Firebase Firestore & Storage powered",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server --port=5000",
+    "build": "echo 'No build needed for pure HTML/JS/CSS'",
+    "deploy": "firebase deploy"
+  },
+  "keywords": ["admin", "firebase", "live", "dashboard"],
+  "author": "Rooka Team",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^10.12.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
